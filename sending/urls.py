@@ -18,5 +18,4 @@ urlpatterns = [
     path('update_sending/<int:pk>/', UpdateSendingView.as_view(), name='update_sending'),
     path('disable_sending/<int:pk>/', DisableSendingView.as_view(), name='disable_sending'),
     path('list_try_sending/', ListTrySending.as_view(), name='list_try_sending'),
-
 ]

@@ -17,7 +17,6 @@ Including another URLconf
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-
 from config import settings
 
 urlpatterns = [
@@ -25,7 +24,7 @@ urlpatterns = [
     path('user/', include('user.urls', namespace='user')),
     path('customer/', include('customer.urls', namespace='customer')),
     path('sending/', include('sending.urls', namespace='sending')),
-    path('blog/', include('blog.urls', namespace='blog')),
+    path('', include('blog.urls', namespace='blog')),
 ]
 
 if settings.DEBUG:
