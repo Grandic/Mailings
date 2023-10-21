@@ -4,7 +4,6 @@ from config.settings import CACHE_ENABLE
 from .models import Blog
 
 
-
 def get_posts():
     if CACHE_ENABLE:
         key = f'posts_list'

@@ -7,11 +7,11 @@
       <h5 class="card-title">Удаление профиля</h5>
       <form method="post">
         {% csrf_token %}
-        Уверены, что хотите удалить профиль "{{ object.username }}"?<br>
+        Подтверждаете удаление профиля "{{ object.username }}"?<br>
         <input type="submit" class="btn btn-outline-danger" value="Уверен">
       </form>
       <div class="card-footer">
-        <a href="{% url 'user:profile' %}" class="btn btn-primary"><< Назад</a>
+        <a href="{% url 'user:profile' %}" class="btn btn-primary"><< Отмена</a>
       </div>
     </div>
   </div>

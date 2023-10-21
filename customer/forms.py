@@ -20,7 +20,7 @@ class CustomerForm(forms.ModelForm):
     def clean_email(self):
         new_email = self.cleaned_data['email']
         if Customer.objects.filter(email=new_email).exists():
-            raise ValidationError('Почта уже занята')
+            raise ValidationError('Почта занята')
         if validate_email(new_email, verify=True) == None:
             raise ValidationError('Почты не существует')
         return new_email

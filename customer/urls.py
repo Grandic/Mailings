@@ -11,5 +11,4 @@ urlpatterns = [
     path('detail_customer/<int:pk>/', cache_page(60)(DetailCustomer.as_view()), name='detail_customer'),
     path('update_customer/<int:pk>/', UpdateCustomer.as_view(), name='update_customer'),
     path('delete_customer/<int:pk>/', DeleteCustomerView.as_view(), name='delete_customer'),
-
 ]
